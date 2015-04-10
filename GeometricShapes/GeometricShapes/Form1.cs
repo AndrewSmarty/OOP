@@ -18,8 +18,9 @@ namespace GeometricShapes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            System.Drawing.Graphics graphics = DrawingSurface.CreateGraphics();
-            
+            var graphics = DrawingSurface.CreateGraphics();
+            var pen = new System.Drawing.Pen(System.Drawing.Color.Lime);
+            var shapes = new Shapes(graphics, pen);
         }
 
 
