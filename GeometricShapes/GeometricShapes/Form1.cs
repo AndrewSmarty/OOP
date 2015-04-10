@@ -11,9 +11,24 @@ namespace GeometricShapes
 {
     public partial class Form1 : Form
     {
+        private int left, top, width, height;
+        private delegate void method();
+
+        private method drawingMethod();
+
         public Form1()
         {
             InitializeComponent();
+            InitializeFields();
+        }
+
+        private void InitializeFields()
+        {
+            left = 0;
+            top = 0;
+            width = 0;
+            height = 0;
+            drawingMethod = null;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,7 +38,9 @@ namespace GeometricShapes
             var shapes = new Shapes(graphics, pen);
         }
 
-
-
+        public void DrawRectangle()
+        {
+            
+        }
     }
 }
