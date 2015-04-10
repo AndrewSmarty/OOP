@@ -1,0 +1,9 @@
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\bin\Debug\GeometricShapes.exe.config
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\bin\Debug\GeometricShapes.exe
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\bin\Debug\GeometricShapes.pdb
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\obj\Debug\GeometricShapes.csprojResolveAssemblyReference.cache
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\obj\Debug\GeometricShapes.Form1.resources
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\obj\Debug\GeometricShapes.Properties.Resources.resources
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\obj\Debug\GeometricShapes.csproj.GenerateResource.Cache
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\obj\Debug\GeometricShapes.exe
+C:\Users\andrei\Desktop\OOP\OOP\GeometricShapes\GeometricShapes\obj\Debug\GeometricShapes.pdb
