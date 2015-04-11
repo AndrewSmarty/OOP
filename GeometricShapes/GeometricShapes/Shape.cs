@@ -24,24 +24,43 @@ namespace GeometricShapes
             this.pen = pen;
         }
 
-        public void DrawRectangle(int left, int top, int width, int height)
+        public Rectangle ConstructRectangle(int left, int top, int width, int height)
         {
             this.graphics.DrawRectangle(pen, left, top, width, height);
+            return (new Rectangle(pen, left, top, width, height));
         }
 
-        public void DrawCircle(int left, int top, int radius)
+        public Circle ConstructCircle(int left, int top, int radius)
         {
             this.graphics.DrawEllipse(pen, left, top, 2*radius, 2*radius);
+            return (new Circle(pen, left, top, radius));
         }
 
-        public void DrawSquare(int left, int top, int side)
+        public Square ConstructSquare(int left, int top, int side)
         {
             this.graphics.DrawRectangle(pen, left, top, side, side);
+            return (new Square(pen, left, top, side));
         }
 
-        public void DrawEllipse(int left, int top, int width, int height)
+        public Ellipse ConstructEllipse(int left, int top, int width, int height)
         {
             this.graphics.DrawEllipse(pen, left, top, width, height);
+            return (new Ellipse(pen, left, top, width, height));
+        }
+
+        public Triangle ConstructTrianlge(int left, int top, int width, int height)
+        {
+
+            var points = new[]
+            {
+                new Point(left+width/2, top),
+                new Point(left+width, top+height), 
+                new Point(left, top+height),
+                new Point(left+width/2, top),
+            };
+
+            this.graphics.DrawLines(pen, points);
+            return (new Triangle(pen, points));
         }
 
     }

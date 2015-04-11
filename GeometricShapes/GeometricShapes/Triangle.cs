@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace GeometricShapes
 {
-    public class Square
+    public class Triangle
     {
-        private int side;
-        public Square(Pen pen, int left, int y, int side)
+        private Point[] points;
+
+        public Triangle(Pen pen, Point[] points)
         {
-            this.side = side;
+            this.points = points;
         }
 
     }

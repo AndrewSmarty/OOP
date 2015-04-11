@@ -16,10 +16,5 @@ namespace GeometricShapes
             this.radius = radius;
         }
 
-        public void Draw()
-        {
-
-        }
-
     }
 }

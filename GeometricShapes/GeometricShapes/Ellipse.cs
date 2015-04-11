@@ -18,10 +18,5 @@ namespace GeometricShapes
             this.height = height;
         }
 
-        public  void Draw()
-        {
-            
-        }
-
     }
 }

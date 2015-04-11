@@ -30,6 +30,8 @@ namespace GeometricShapes
         {
             InitializeComponent();
             InitializeFields();
+            //this.textBox1.KeyPress += new KeyPressEventHandler(textBox1_KeyPress);
+            //this.textBox2.KeyPress += new KeyPressEventHandler(textBox1_KeyPress);
         }
 
         private void InitializeFields()
@@ -46,28 +48,62 @@ namespace GeometricShapes
             var graphics = DrawingSurface.CreateGraphics();
             var pen = new System.Drawing.Pen(System.Drawing.Color.Yellow);
             shape = new Shape(graphics, pen);
+            //var paintMan = new PaintMan();
+            //paintMan.SetShapesStruct(shape);
+        }
+
+        /****************     Draw  Events     **********************/
+
+        private void DrawRectangle()
+        {
+            shape.ConstructRectangle(left, top, width, height);
+        }
+
+        private void DrawCircle()
+        {
+            shape.ConstructCircle(left, top, width / 2);
+        }
+
+        private void DrawSquare()
+        {
+            shape.ConstructSquare(left, top, width);
+        }
+
+        private void DrawEllipse()
+        {
+            shape.ConstructEllipse(left, top, width, height);
+        }
+
+        private void DrawTriangle()
+        {
+            shape.ConstructTrianlge(left, top, width, height);
         }
 
         /****************    Click Events     **********************/
   
         private void RectangleBtn_Click(object sender, EventArgs e)
         {
-            DrawSpecifiedShape = Rectangle;
+            DrawSpecifiedShape = DrawRectangle;
         }
 
         private void SquareBtn_Click(object sender, EventArgs e)
         {
-            DrawSpecifiedShape = Square;
+            DrawSpecifiedShape = DrawSquare;
         }
 
         private void EllipseBtn_Click(object sender, EventArgs e)
         {
-            DrawSpecifiedShape = Ellipse;
+            DrawSpecifiedShape = DrawEllipse;
         }
 
         private void CircleBtn_Click(object sender, EventArgs e)
         {
-            DrawSpecifiedShape = Circle;
+            DrawSpecifiedShape = DrawCircle;
+        }
+
+        private void TriangleBtn_Click(object sender, EventArgs e)
+        {
+            DrawSpecifiedShape = DrawTriangle;
         }
 
         private void ClrSurfaceBtn_Click(object sender, EventArgs e)
@@ -96,28 +132,19 @@ namespace GeometricShapes
             DrawSpecifiedShape();
         }
 
-
-        /****************     Draw  Events     **********************/
-
-        private void Rectangle()
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            shape.DrawRectangle(left, top, width, height);
+            DropLetters();
         }
 
-        private void Circle()
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            shape.DrawCircle(left, top, width/2);
+            DropLetters();
         }
 
-        private void Square()
+        private void DropLetters()
         {
-            shape.DrawSquare(left, top, width);
-        }
-
-        private void Ellipse()
-        {
-            shape.DrawEllipse(left, top, width, height);
-        }
-
+            this.textBox1.KeyPress += new KeyPressEventHandler(textBox1_KeyPress);
+        }        
     }
 }

@@ -39,11 +39,12 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.ColorPaletteBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.TriangleBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RectangleBtn
             // 
-            this.RectangleBtn.Location = new System.Drawing.Point(12, 377);
+            this.RectangleBtn.Location = new System.Drawing.Point(12, 373);
             this.RectangleBtn.Name = "RectangleBtn";
             this.RectangleBtn.Size = new System.Drawing.Size(98, 23);
             this.RectangleBtn.TabIndex = 0;
@@ -53,7 +54,7 @@
             // 
             // CircleBtn
             // 
-            this.CircleBtn.Location = new System.Drawing.Point(12, 407);
+            this.CircleBtn.Location = new System.Drawing.Point(12, 402);
             this.CircleBtn.Name = "CircleBtn";
             this.CircleBtn.Size = new System.Drawing.Size(98, 23);
             this.CircleBtn.TabIndex = 1;
@@ -63,7 +64,7 @@
             // 
             // EllipseBtn
             // 
-            this.EllipseBtn.Location = new System.Drawing.Point(133, 407);
+            this.EllipseBtn.Location = new System.Drawing.Point(133, 402);
             this.EllipseBtn.Name = "EllipseBtn";
             this.EllipseBtn.Size = new System.Drawing.Size(102, 23);
             this.EllipseBtn.TabIndex = 2;
@@ -73,7 +74,7 @@
             // 
             // SquareBtn
             // 
-            this.SquareBtn.Location = new System.Drawing.Point(133, 378);
+            this.SquareBtn.Location = new System.Drawing.Point(133, 373);
             this.SquareBtn.Name = "SquareBtn";
             this.SquareBtn.Size = new System.Drawing.Size(102, 23);
             this.SquareBtn.TabIndex = 3;
@@ -97,6 +98,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -104,6 +106,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // ClrSurfaceBtn
             // 
@@ -118,7 +121,7 @@
             // ColorPaletteBtn
             // 
             this.ColorPaletteBtn.BackColor = System.Drawing.Color.Yellow;
-            this.ColorPaletteBtn.Location = new System.Drawing.Point(405, 407);
+            this.ColorPaletteBtn.Location = new System.Drawing.Point(404, 405);
             this.ColorPaletteBtn.Name = "ColorPaletteBtn";
             this.ColorPaletteBtn.Size = new System.Drawing.Size(41, 23);
             this.ColorPaletteBtn.TabIndex = 8;
@@ -134,11 +137,22 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Choose a color";
             // 
+            // TriangleBtn
+            // 
+            this.TriangleBtn.Location = new System.Drawing.Point(12, 431);
+            this.TriangleBtn.Name = "TriangleBtn";
+            this.TriangleBtn.Size = new System.Drawing.Size(98, 23);
+            this.TriangleBtn.TabIndex = 10;
+            this.TriangleBtn.Text = "Triangle";
+            this.TriangleBtn.UseVisualStyleBackColor = true;
+            this.TriangleBtn.Click += new System.EventHandler(this.TriangleBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 456);
+            this.Controls.Add(this.TriangleBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ColorPaletteBtn);
             this.Controls.Add(this.ClrSurfaceBtn);
@@ -170,6 +184,7 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button ColorPaletteBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button TriangleBtn;
     }
 }
 
