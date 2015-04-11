@@ -35,11 +35,12 @@
             this.DrawingSurface = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ClrSurfaceBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RectangleBtn
             // 
-            this.RectangleBtn.Location = new System.Drawing.Point(116, 376);
+            this.RectangleBtn.Location = new System.Drawing.Point(60, 375);
             this.RectangleBtn.Name = "RectangleBtn";
             this.RectangleBtn.Size = new System.Drawing.Size(98, 23);
             this.RectangleBtn.TabIndex = 0;
@@ -49,30 +50,33 @@
             // 
             // CircleBtn
             // 
-            this.CircleBtn.Location = new System.Drawing.Point(116, 405);
+            this.CircleBtn.Location = new System.Drawing.Point(60, 404);
             this.CircleBtn.Name = "CircleBtn";
             this.CircleBtn.Size = new System.Drawing.Size(98, 23);
             this.CircleBtn.TabIndex = 1;
             this.CircleBtn.Text = "Circle";
             this.CircleBtn.UseVisualStyleBackColor = true;
+            this.CircleBtn.Click += new System.EventHandler(this.CircleBtn_Click);
             // 
             // EllipseBtn
             // 
-            this.EllipseBtn.Location = new System.Drawing.Point(241, 405);
+            this.EllipseBtn.Location = new System.Drawing.Point(183, 404);
             this.EllipseBtn.Name = "EllipseBtn";
             this.EllipseBtn.Size = new System.Drawing.Size(102, 23);
             this.EllipseBtn.TabIndex = 2;
             this.EllipseBtn.Text = "Ellipse";
             this.EllipseBtn.UseVisualStyleBackColor = true;
+            this.EllipseBtn.Click += new System.EventHandler(this.EllipseBtn_Click);
             // 
             // SquareBtn
             // 
-            this.SquareBtn.Location = new System.Drawing.Point(241, 376);
+            this.SquareBtn.Location = new System.Drawing.Point(183, 375);
             this.SquareBtn.Name = "SquareBtn";
             this.SquareBtn.Size = new System.Drawing.Size(102, 23);
             this.SquareBtn.TabIndex = 3;
             this.SquareBtn.Text = "Square";
             this.SquareBtn.UseVisualStyleBackColor = true;
+            this.SquareBtn.Click += new System.EventHandler(this.SquareBtn_Click);
             // 
             // DrawingSurface
             // 
@@ -86,23 +90,34 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(374, 378);
+            this.textBox1.Location = new System.Drawing.Point(319, 377);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(374, 408);
+            this.textBox2.Location = new System.Drawing.Point(319, 407);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 6;
+            // 
+            // ClrSurfaceBtn
+            // 
+            this.ClrSurfaceBtn.Location = new System.Drawing.Point(454, 377);
+            this.ClrSurfaceBtn.Name = "ClrSurfaceBtn";
+            this.ClrSurfaceBtn.Size = new System.Drawing.Size(75, 50);
+            this.ClrSurfaceBtn.TabIndex = 7;
+            this.ClrSurfaceBtn.Text = "Clear Surface";
+            this.ClrSurfaceBtn.UseVisualStyleBackColor = true;
+            this.ClrSurfaceBtn.Click += new System.EventHandler(this.ClrSurfaceBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 456);
+            this.Controls.Add(this.ClrSurfaceBtn);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.DrawingSurface);
@@ -127,6 +142,7 @@
         private System.Windows.Forms.Panel DrawingSurface;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button ClrSurfaceBtn;
     }
 }
 

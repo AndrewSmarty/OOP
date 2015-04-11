@@ -20,8 +20,8 @@ namespace GeometricShapes
         
         private int left, top, width, height;
 
-        private delegate void DrawingMethod(int left, int top, int width, int height);
-        private DrawingMethod drawShape;
+        private delegate void DrawingMethod();
+        private DrawingMethod drawSpecifiedShape;
 
         private Shapes shapes;
 
@@ -34,7 +34,7 @@ namespace GeometricShapes
         private void InitializeFields()
         {
             left = top = width = height = 0;
-            drawShape = null;
+            drawSpecifiedShape = null;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,37 +47,61 @@ namespace GeometricShapes
             shapes = new Shapes(graphics, pen);
         }
 
-        private void Rectangle(int left, int top, int width, int height)
-        {
-
-        }
-
-        private void Circle(int left, int top, int radius)
-        {
-
-        }
-
-        private void Square(int left, int top, int side)
-        {
-
-        }
-
-        private void Ellipse(int left, int top, int width, int height)
-        {
-
-        }
-
-
         private void RectangleBtn_Click(object sender, EventArgs e)
         {
-            drawShape = Rectangle;
+            drawSpecifiedShape = Rectangle;
+        }
+
+        private void SquareBtn_Click(object sender, EventArgs e)
+        {
+            drawSpecifiedShape = Square;
+        }
+
+        private void EllipseBtn_Click(object sender, EventArgs e)
+        {
+            drawSpecifiedShape = Ellipse;
+        }
+
+        private void CircleBtn_Click(object sender, EventArgs e)
+        {
+            drawSpecifiedShape = Circle;
         }
 
         private void DrawingSurface_MouseDown(object sender, MouseEventArgs e)
         {
-            drawShape();
+            left = e.X;
+            top = e.Y;
+            width = int.Parse(textBox1.Text);
+            height = int.Parse(textBox2.Text);
+
+            drawSpecifiedShape();
         }
-    
+
+        private void Rectangle()
+        {
+            shapes.DrawRectangle(left, top, width, height);
+        }
+
+        private void Circle()
+        {
+            shapes.DrawCircle(left, top, width/2);
+        }
+
+        private void Square()
+        {
+            shapes.DrawSquare(left, top, width);
+        }
+
+        private void Ellipse()
+        {
+            shapes.DrawEllipse(left, top, width, height);
+        }
+
+        private void ClrSurfaceBtn_Click(object sender, EventArgs e)
+        {
+            DrawingSurface.Refresh();
+        }
+
 
     }
 }
