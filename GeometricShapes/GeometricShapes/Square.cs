@@ -7,19 +7,18 @@ using System.Threading.Tasks;
 
 namespace GeometricShapes
 {
-    public class Square : Shape
+    public class Square
     {
         private int side;
 
-        public Square()
+        public Square(Pen pen, int left, int y, int side)
         {
-            
+            this.side = side;
         }
 
-        public override void Draw()
+        public void Draw()
         {
-            var graphics = System.Windows.Forms.Panel.CreateGraphics();
-            graphics.FillRectangle(Brush, new System.Drawing.Rectangle(Left, Top, side, side));
+      
         }
 
     }

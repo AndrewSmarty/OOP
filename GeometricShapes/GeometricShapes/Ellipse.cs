@@ -12,15 +12,15 @@ namespace GeometricShapes
         private int width;
         private int height;
 
-        public Ellipse()
+        public Ellipse(Pen pen, int left, int right, int width, int height):base(pen, left, right, width)
         {
-            
+            this.width = width;
+            this.height = height;
         }
 
-        public override void Draw()
+        public  void Draw()
         {
-            var graphics = System.Windows.Forms.Panel.CreateGraphics();
-            graphics.FillRectangle(Brush, new System.Drawing.Rectangle(Left, Top, width, height));
+            
         }
 
     }

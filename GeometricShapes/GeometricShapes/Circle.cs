@@ -11,15 +11,14 @@ namespace GeometricShapes
     {
         private int radius;
 
-        public Circle(int radius)
+        public Circle(Pen pen, int left, int top, int radius)
         {
-            this.radius = radius
+            this.radius = radius;
         }
 
-        public override void Draw()
+        public void Draw()
         {
-            var graphics = System.Windows.Forms.Panel.CreateGraphics();
-            graphics.FillEllipse(Brush, new System.Drawing.Rectangle(Left, Top, radius * 2, radius * 2));
+
         }
 
     }

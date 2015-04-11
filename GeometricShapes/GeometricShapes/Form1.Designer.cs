@@ -36,11 +36,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.ClrSurfaceBtn = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.ColorPaletteBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RectangleBtn
             // 
-            this.RectangleBtn.Location = new System.Drawing.Point(60, 375);
+            this.RectangleBtn.Location = new System.Drawing.Point(12, 377);
             this.RectangleBtn.Name = "RectangleBtn";
             this.RectangleBtn.Size = new System.Drawing.Size(98, 23);
             this.RectangleBtn.TabIndex = 0;
@@ -50,7 +53,7 @@
             // 
             // CircleBtn
             // 
-            this.CircleBtn.Location = new System.Drawing.Point(60, 404);
+            this.CircleBtn.Location = new System.Drawing.Point(12, 407);
             this.CircleBtn.Name = "CircleBtn";
             this.CircleBtn.Size = new System.Drawing.Size(98, 23);
             this.CircleBtn.TabIndex = 1;
@@ -60,7 +63,7 @@
             // 
             // EllipseBtn
             // 
-            this.EllipseBtn.Location = new System.Drawing.Point(183, 404);
+            this.EllipseBtn.Location = new System.Drawing.Point(133, 407);
             this.EllipseBtn.Name = "EllipseBtn";
             this.EllipseBtn.Size = new System.Drawing.Size(102, 23);
             this.EllipseBtn.TabIndex = 2;
@@ -70,7 +73,7 @@
             // 
             // SquareBtn
             // 
-            this.SquareBtn.Location = new System.Drawing.Point(183, 375);
+            this.SquareBtn.Location = new System.Drawing.Point(133, 378);
             this.SquareBtn.Name = "SquareBtn";
             this.SquareBtn.Size = new System.Drawing.Size(102, 23);
             this.SquareBtn.TabIndex = 3;
@@ -90,33 +93,54 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 377);
+            this.textBox1.Location = new System.Drawing.Point(265, 380);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 407);
+            this.textBox2.Location = new System.Drawing.Point(265, 410);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 6;
             // 
             // ClrSurfaceBtn
             // 
-            this.ClrSurfaceBtn.Location = new System.Drawing.Point(454, 377);
+            this.ClrSurfaceBtn.Location = new System.Drawing.Point(492, 383);
             this.ClrSurfaceBtn.Name = "ClrSurfaceBtn";
-            this.ClrSurfaceBtn.Size = new System.Drawing.Size(75, 50);
+            this.ClrSurfaceBtn.Size = new System.Drawing.Size(75, 52);
             this.ClrSurfaceBtn.TabIndex = 7;
             this.ClrSurfaceBtn.Text = "Clear Surface";
             this.ClrSurfaceBtn.UseVisualStyleBackColor = true;
             this.ClrSurfaceBtn.Click += new System.EventHandler(this.ClrSurfaceBtn_Click);
+            // 
+            // ColorPaletteBtn
+            // 
+            this.ColorPaletteBtn.BackColor = System.Drawing.Color.Yellow;
+            this.ColorPaletteBtn.Location = new System.Drawing.Point(405, 407);
+            this.ColorPaletteBtn.Name = "ColorPaletteBtn";
+            this.ColorPaletteBtn.Size = new System.Drawing.Size(41, 23);
+            this.ColorPaletteBtn.TabIndex = 8;
+            this.ColorPaletteBtn.UseVisualStyleBackColor = false;
+            this.ColorPaletteBtn.Click += new System.EventHandler(this.ColorPaletteBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(387, 383);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Choose a color";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 456);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ColorPaletteBtn);
             this.Controls.Add(this.ClrSurfaceBtn);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -143,6 +167,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button ClrSurfaceBtn;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button ColorPaletteBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
