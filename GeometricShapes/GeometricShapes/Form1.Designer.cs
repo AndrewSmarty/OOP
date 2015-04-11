@@ -33,40 +33,43 @@
             this.EllipseBtn = new System.Windows.Forms.Button();
             this.SquareBtn = new System.Windows.Forms.Button();
             this.DrawingSurface = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // RectangleBtn
             // 
-            this.RectangleBtn.Location = new System.Drawing.Point(120, 376);
+            this.RectangleBtn.Location = new System.Drawing.Point(116, 376);
             this.RectangleBtn.Name = "RectangleBtn";
-            this.RectangleBtn.Size = new System.Drawing.Size(75, 23);
+            this.RectangleBtn.Size = new System.Drawing.Size(98, 23);
             this.RectangleBtn.TabIndex = 0;
             this.RectangleBtn.Text = "Rectangle";
             this.RectangleBtn.UseVisualStyleBackColor = true;
+            this.RectangleBtn.Click += new System.EventHandler(this.RectangleBtn_Click);
             // 
             // CircleBtn
             // 
-            this.CircleBtn.Location = new System.Drawing.Point(215, 376);
+            this.CircleBtn.Location = new System.Drawing.Point(116, 405);
             this.CircleBtn.Name = "CircleBtn";
-            this.CircleBtn.Size = new System.Drawing.Size(75, 23);
+            this.CircleBtn.Size = new System.Drawing.Size(98, 23);
             this.CircleBtn.TabIndex = 1;
             this.CircleBtn.Text = "Circle";
             this.CircleBtn.UseVisualStyleBackColor = true;
             // 
             // EllipseBtn
             // 
-            this.EllipseBtn.Location = new System.Drawing.Point(406, 376);
+            this.EllipseBtn.Location = new System.Drawing.Point(241, 405);
             this.EllipseBtn.Name = "EllipseBtn";
-            this.EllipseBtn.Size = new System.Drawing.Size(75, 23);
+            this.EllipseBtn.Size = new System.Drawing.Size(102, 23);
             this.EllipseBtn.TabIndex = 2;
             this.EllipseBtn.Text = "Ellipse";
             this.EllipseBtn.UseVisualStyleBackColor = true;
             // 
             // SquareBtn
             // 
-            this.SquareBtn.Location = new System.Drawing.Point(313, 376);
+            this.SquareBtn.Location = new System.Drawing.Point(241, 376);
             this.SquareBtn.Name = "SquareBtn";
-            this.SquareBtn.Size = new System.Drawing.Size(75, 23);
+            this.SquareBtn.Size = new System.Drawing.Size(102, 23);
             this.SquareBtn.TabIndex = 3;
             this.SquareBtn.Text = "Square";
             this.SquareBtn.UseVisualStyleBackColor = true;
@@ -79,12 +82,29 @@
             this.DrawingSurface.Name = "DrawingSurface";
             this.DrawingSurface.Size = new System.Drawing.Size(577, 350);
             this.DrawingSurface.TabIndex = 4;
+            this.DrawingSurface.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingSurface_MouseDown);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(374, 378);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(374, 408);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 411);
+            this.ClientSize = new System.Drawing.Size(601, 456);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.DrawingSurface);
             this.Controls.Add(this.SquareBtn);
             this.Controls.Add(this.EllipseBtn);
@@ -94,6 +114,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,6 +125,8 @@
         private System.Windows.Forms.Button EllipseBtn;
         private System.Windows.Forms.Button SquareBtn;
         private System.Windows.Forms.Panel DrawingSurface;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
