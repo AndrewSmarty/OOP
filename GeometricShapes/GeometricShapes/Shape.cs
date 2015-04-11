@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace GeometricShapes
 {
-    public class Shapes
+    public abstract class Shape
     {
         private System.Drawing.Graphics graphics;
         private System.Drawing.Pen pen;
-
-        public Shapes(System.Drawing.Graphics graphics, Pen pen)
+        private int Left;
+        private int Top;
+    
+        public Shape(System.Drawing.Graphics graphics, Pen pen)
         {
             this.graphics = graphics;
             this.pen = pen;
@@ -37,5 +39,7 @@ namespace GeometricShapes
         {
             this.graphics.DrawEllipse(pen, left, top, width, height);
         }
+
+        public abstract void Draw();
     }
 }

@@ -23,7 +23,7 @@ namespace GeometricShapes
         private delegate void DrawingMethod();
         private DrawingMethod drawSpecifiedShape;
 
-        private Shapes shapes;
+        private Shape shapes;
 
         public Form1()
         {
@@ -44,7 +44,7 @@ namespace GeometricShapes
 
             var graphics = DrawingSurface.CreateGraphics();
             var pen = new System.Drawing.Pen(System.Drawing.Color.Lime);
-            shapes = new Shapes(graphics, pen);
+            shapes = new Shape(graphics, pen);
         }
 
         private void RectangleBtn_Click(object sender, EventArgs e)
