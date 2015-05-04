@@ -1,0 +1,9 @@
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\bin\Debug\Serialization.exe.config
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\bin\Debug\Serialization.exe
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\bin\Debug\Serialization.pdb
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\obj\Debug\Serialization.csprojResolveAssemblyReference.cache
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\obj\Debug\Serialization.Form1.resources
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\obj\Debug\Serialization.Properties.Resources.resources
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\obj\Debug\Serialization.csproj.GenerateResource.Cache
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\obj\Debug\Serialization.exe
+C:\Users\andrei\Desktop\OOP\OOP\Serialization\Serialization\Serialization\obj\Debug\Serialization.pdb
