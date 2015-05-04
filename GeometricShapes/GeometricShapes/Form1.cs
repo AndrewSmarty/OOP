@@ -56,7 +56,8 @@ namespace GeometricShapes
 
         private void DrawRectangle()
         {
-            shape.ConstructRectangle(left, top, width, height);
+            var Rect = shape.ConstructRectangle(left, top, width, height);
+            
         }
 
         private void DrawCircle()
