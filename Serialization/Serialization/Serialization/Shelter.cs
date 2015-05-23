@@ -13,9 +13,11 @@ namespace Serialization
         private Size rowSize;
         private const int InitRowOffsetTop = 20;
         private const int rowOffsetY = 30;
-
+        public bool IsSubmitted;
         public delegate void OnShelterSubmit(Object sender, EventArgs e);
         public OnShelterSubmit OnSubmit;
+
+        public Dictionary<string, string> Content; 
  
         private Panel self;
 
@@ -29,6 +31,9 @@ namespace Serialization
         {   
             rowSize = new Size(100, 30);
             CreateSingleBlock(location, size, borderStyle);
+
+            IsSubmitted = false;
+            Content = new Dictionary<string, string>();
         }
 
         private void CreateSingleBlock(Point location, Size size, BorderStyle borderStyle)
@@ -36,7 +41,7 @@ namespace Serialization
             self = new Panel { Location = location, BorderStyle = borderStyle, Size = size, AutoScroll = true};
         }
 
-        private void CreateSingleRow(string[] property, Point location)
+        private void CreateSingleRow(IList<string> property, Point location)
         {
             var label = new Label { Text = property[0], Location = location, Size = rowSize };
 
@@ -46,7 +51,11 @@ namespace Serialization
                 Location = new Point(label.Size.Width + label.Location.X, location.Y),
                 Size = rowSize
             };
-
+            if (property[0] == "ID")
+            {
+                label.Visible = false;
+                textbox.Visible = false;
+            }
             self.Controls.Add(label);
             self.Controls.Add(textbox);
         }
@@ -58,18 +67,32 @@ namespace Serialization
             button.Location = new Point(location.X - button.Size.Width/2, location.Y);
             button.Text = "Create";
             button.Name = "CreateFishBtn";
-           // button.Click += new System.EventHandler(OnSubmit);
+
+            OnSubmit = OnSubmitBtnClk;
+            button.Click += new System.EventHandler(OnSubmit);
             self.Controls.Add(button);
         }
 
-        public void AddProperties(Dictionary<string, string> dictionary)
+        private void OnSubmitBtnClk(Object sender, EventArgs e)
+        {
+            Content.Clear();
+            
+            var key = self.Controls.OfType<Label>().Select(control => control.Text).ToArray();
+            var value = self.Controls.OfType<TextBox>().Select(control => control.Text).ToArray();
+
+            for (var i = 0; i < key.Length; i++)
+            {
+                Content.Add(key[i], value[i]);
+            }
+
+            IsSubmitted = true;
+        }
+
+        public void AddProperties(Dictionary<string, string> dictionary, bool isSubmitBtnRequired)
         {
             var offsetY = InitRowOffsetTop;
             foreach (var property in dictionary)
             {
-                if (property.Key == "ID") 
-                    continue;
-
                 var propertyArr = new string[2];
                 propertyArr[0] = property.Key;
                 propertyArr[1] = property.Value;
@@ -77,7 +100,8 @@ namespace Serialization
                 offsetY += rowOffsetY;
             }
 
-            AddCreateButton(new Point(self.Width / 2, offsetY));
+            if (isSubmitBtnRequired)
+                AddCreateButton(new Point(self.Width / 2, offsetY));
         }
 
         public void fillWith(Fish fish)

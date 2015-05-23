@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ArrayOfFish xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Fish xsi:type="Barbus">
+    <Name>Barbus</Name>
+    <Price>500</Price>
+    <ID>Serialization.Barbus</ID>
+    <MouthSize>20</MouthSize>
+    <EatsFish>yes</EatsFish>
+  </Fish>
+  <Fish xsi:type="Guppi">
+    <Name>Lil Guppi</Name>
+    <Price>100</Price>
+    <ID>Serialization.Guppi</ID>
+    <Size>45</Size>
+  </Fish>
+  <Fish xsi:type="Sackgill">
+    <Name>Power Light</Name>
+    <Price>450</Price>
+    <ID>Serialization.Sackgill</ID>
+    <TailLength>80</TailLength>
+    <Color>yellow</Color>
+  </Fish>
+  <Fish xsi:type="Barbus">
+    <Name>Hunter</Name>
+    <Price>540</Price>
+    <ID>Serialization.Barbus</ID>
+    <MouthSize>40</MouthSize>
+    <EatsFish>yes</EatsFish>
+  </Fish>
+</ArrayOfFish>
